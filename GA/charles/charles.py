@@ -21,13 +21,6 @@ class Individual:
         else:
             self.representation = representation
         self.fitness = self.get_fitness()
-
-    # def get_fitness(solution):
-    #     cost = 0
-    #     for i in range(len(data)):
-    #         cost += solution[i] * data[i][2]
-
-    #     return cost  # maximize the inverse of cost, i.e. minimize cost
     
     def get_fitness(self):
         """A function to calculate the total weight of the bag if the capacity and nutrient constraints are not exceeded.

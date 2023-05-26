@@ -10,13 +10,6 @@ from random import choice, random, randint, sample
 from operator import attrgetter
 import matplotlib.pyplot as plt
 
-# # #write a function to get the fitness of an individual for the stigler diet problem usign data 
-# def get_fitness(solution):
-#     cost = 0
-#     for i in range(len(data)):
-#         cost += solution[i] * data[i][2]
-
-#     return cost  # maximize the cost 
 
 def get_fitness(self):
     """A function to calculate the total weight of the bag if the capacity and nutrient constraints are not exceeded.
@@ -172,3 +165,5 @@ plt.xlabel('Iteration')
 plt.title('Mean Fitness for 30 iterations')
 plt.legend()
 plt.show()
+
+
