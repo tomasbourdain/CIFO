@@ -90,7 +90,7 @@ Individual.get_neighbours = get_neighbours
 #     replacement=True,
 #     optim="max")
 
-#plot the medium fitness for every generation thoughout 10 iterations 
+#plot the medium fitness for every generation thoughout 30 iterations 
 def plt_mean_fitness(select, mutate, crossover, elitism, iterations):
     pop = Population(
     size=30,
@@ -162,8 +162,18 @@ plt.plot(range(iterations), results_rank_12, label='Tournament/Inversion/PMX') #
 
 plt.ylabel('Mean Fitness')
 plt.xlabel('Iteration')
-plt.title('Mean Fitness for 30 iterations')
+plt.title('Fitness for 30 iterations')
 plt.legend()
 plt.show()
+ 
+pop = Population(
+    size=30,
+    sol_size=len(data),
+    valid_set=[0,1],
+    replacement=True,
+    optim="max")
+pop.evolve(gens=100, select=tournament_sel, mutate=swap_mutation, crossover=single_point_co,
+            mut_prob=0.05, xo_prob=0.9, elitism=True)
+
 
 
